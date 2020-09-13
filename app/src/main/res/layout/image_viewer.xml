@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#36393F"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageViewer"
+    android:padding = "10dp">
+
+    <ProgressBar
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/titleLabel"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/imageContainer"
+        >
+
+        <ImageView
+            android:id="@+id/contentDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleLabel"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+    </LinearLayout>
+
+    <TextView
+        android:maxLines="2"
+        android:ellipsize="start"
+        android:scrollHorizontally="true"
+        android:textColor="#fff"
+        android:id="@+id/titleLabel"
+        android:layout_below="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:shadowColor="#000"
+        android:shadowRadius="5"
+        android:visibility="gone"
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="❯"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/leftArrow"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:shadowColor="#000"
+        android:shadowRadius="5"
+        android:text="❮"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/linkLabel"
+        android:layout_marginBottom="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLabel"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:textColor="#ddd"
+        android:textSize="12sp" />
+
+</RelativeLayout>

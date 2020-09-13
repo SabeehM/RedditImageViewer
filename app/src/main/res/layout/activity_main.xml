@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#36393F"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding = "30dp">
+
+
+    <TextView
+        style="@style/labelStyle"
+        android:textSize="30sp"
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reddit Image Viewer"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"
+        />
+
+    <TextView
+        style="@style/labelStyle"
+        android:text="Subreddit"
+        android:id="@+id/subredditLabel"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+    />
+    <EditText
+        android:backgroundTint="#fff"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:layout_marginTop="10dp"
+        android:hint="reddit.com/r/..."
+        android:id="@+id/subredditInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@+id/subredditLabel"
+        android:gravity="center"
+        />
+
+    <TextView
+        style="@style/labelStyle"
+        android:text="Filter"
+        android:id="@+id/dropdownLabel"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/subredditInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <Spinner
+        style="@style/labelStyle"
+        android:layout_marginHorizontal="80dp"
+        android:id="@+id/spinner1"
+        android:layout_below="@+id/dropdownLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_below="@+id/spinner1"
+        android:id="@+id/delayContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="50dp"
+        >
+    <TextView
+        style="@style/labelStyle"
+        android:id="@+id/delayLabel"
+        android:layout_marginTop="50dp"
+        android:text="Delay (s) [ 2s-60s ]"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:backgroundTint="#fff"
+        android:textColor="#fff"
+        android:layout_marginHorizontal="50dp"
+        android:id="@+id/delayButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:gravity="center"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorMsg"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/delayContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="invisible"
+        />
+
+    <Button
+        style="@style/labelStyle"
+        android:id="@+id/GoButton"
+        android:text="Go!"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/errorMsg"
+        android:gravity="center"
+        />
+
+</RelativeLayout>
